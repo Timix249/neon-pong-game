@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0c15">
+<title>Neon Arcade · Overdrive</title>
+<link rel="stylesheet" href="arcade.css">
+<script type="module" src="arcade.js"></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="./"><span class="logo">N</span> NEON ARCADE</a><a class="tag" href="../">← VERSIONEN</a></header>
+<main class="wrap" id="catalog">
+<section class="hero">
+<div class="hero-copy"><p class="eyebrow">SPIELHALLE / VERSION 03</p><h1>Arcade<br><em>Overdrive.</em></h1><p>Fünf Spiele. Eine Tastatur. Wähle mit 1–5 oder springe mit den Pfeiltasten durch die Sammlung.</p><a class="primary" href="#games">Spiele entdecken <span aria-hidden="true">↓</span></a></div>
+<div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="scan"></div><span>03<span>.</span></span></div>
+</section>
+<section aria-labelledby="games">
+<div class="section-head"><h2 id="games">Spiele</h2><span>05 TITEL · 1–5 WÄHLEN</span></div>
+<div class="cards" aria-label="Spieleauswahl">
+<button class="card pong" data-game="pong"><svg viewBox="0 0 360 180" aria-hidden="true"><path class="guide" d="M180 5v170" stroke-dasharray="6 10"/><path d="M74 65v62m214-79v62" stroke-width="12" stroke-linecap="round"/><path class="guide" d="m110 128 94-55 50 18"/><circle cx="204" cy="73" r="8" fill="currentColor"/></svg><span class="card-copy"><small>01 / ARCADE SPORT</small><strong>Neon Pong</strong><span>Drei Stufen, schnelle Rallys und Power-ups.</span><b>Spielen ↗</b></span></button>
+<button class="card drift" data-game="drift"><svg viewBox="0 0 360 180" aria-hidden="true"><ellipse class="guide" cx="180" cy="92" rx="134" ry="66"/><ellipse cx="180" cy="92" rx="109" ry="44" stroke-width="4"/><path d="m226 117 33-20 10 17-33 20z" fill="currentColor"/><path class="guide" d="m220 133-36 20m45-10-25 14"/></svg><span class="card-copy"><small>02 / ZEITRENNEN</small><strong>Neon Drift</strong><span>Drei Runden mit Fahrhilfe oder im Profimodus.</span><b>Spielen ↗</b></span></button>
+<button class="card orbit" data-game="orbit"><svg viewBox="0 0 360 180" aria-hidden="true"><circle class="guide" cx="180" cy="95" r="66"/><path d="m180 63 23 62-23-13-23 13z" stroke-width="4"/><path d="m105 42 10 10-10 10-10-10zm150 0 10 10-10 10-10-10z" fill="currentColor"/><path class="guide" d="M180 32v20m-12 83-6 17m30-17 6 17"/></svg><span class="card-copy"><small>03 / SPACE SHOOTER</small><strong>Orbit Siege</strong><span>Automatisches Feuer, Bosswellen und Schiffs-Upgrades.</span><b>Spielen ↗</b></span></button>
+<button class="card breaker" data-game="breaker"><svg viewBox="0 0 360 180" aria-hidden="true"><path d="M79 50h52m22 0h52m22 0h52M99 76h52m22 0h52m22 0h27" stroke-width="14" stroke-linecap="round"/><path class="guide" d="m145 144 62-44 40 24"/><circle cx="207" cy="100" r="7" fill="currentColor"/><path d="M117 145h59" stroke-width="9" stroke-linecap="round"/></svg><span class="card-copy"><small>04 / BRICK BREAKER</small><strong>Prism Break</strong><span>Räume Formationen ab und nutze den durchschlagenden Ball.</span><b>Spielen ↗</b></span></button>
+<button class="card runner" data-game="runner"><svg viewBox="0 0 360 180" aria-hidden="true"><path class="guide" d="M104 34v112m76-112v112m76-112v112"/><path d="M82 51h44v22H82zM234 82h44v22h-44z" stroke-width="4"/><path d="m180 106 19 19-19 19-19-19z" fill="currentColor"/><circle cx="180" cy="64" r="9" fill="currentColor"/></svg><span class="card-copy"><small>05 / LANE RUNNER</small><strong>Pulse Runner</strong><span>Wechsle die Spur, sammle Energie und halte die Combo.</span><b>Spielen ↗</b></span></button>
+</div>
+</section>
+</main>
+<main class="wrap player" id="player" hidden>
+<div class="player-head"><button id="back">← Spiele</button><h1 id="game-title"></h1><div class="actions"><button id="pause" aria-keyshortcuts="Escape">Pause</button><button id="restart" aria-keyshortcuts="F2">Neustart <kbd>F2</kbd></button><button id="full" aria-label="Vollbild" aria-keyshortcuts="F">⛶ <kbd>F</kbd></button></div></div>
+<div class="game-deck" id="deck">
+<div class="readout" id="readout"></div>
+<div class="stage">
+<canvas id="screen" width="900" height="540" tabindex="0" aria-label="Spielfeld"></canvas>
+<div class="overlay" id="overlay"><h2 id="overlay-title"></h2><p id="overlay-copy"></p><div id="choices" class="actions"></div></div>
+</div>
+<div id="controls" class="controls" aria-label="Spielsteuerung"></div>
+</div>
+<p id="instructions" class="instructions"></p><div class="keybar"><span><kbd>Esc</kbd> Pause / zurück</span><span><kbd>F2</kbd> Neustart</span><span><kbd>F</kbd> Vollbild</span></div>
+</main>
+<footer class="foot"><span>NEON ARCADE</span><a href="../">Versionsarchiv ↗</a></footer>
+</body></html>
